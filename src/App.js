@@ -1,22 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import MiComponente from './MiComponente';
+import SegundoComponente from './SegundoComponente';
+import TercerComponente from './TercerComponente';
+import { EventosComponente } from './EventosComponente';
+
 
 function App() {
+  
+  const ficha_media={
+    altura: "168cm",
+    grupo: "H+",
+    estado: "Bueno",
+    alergias: "ninguna"
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Bienvenido al master de ract!!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Cargar mi primer componente*/}
+        <div className='componentes'>
+          <hr />
+            <EventosComponente />
+          <hr />
+            <TercerComponente
+              ficha={ficha_media}
+            />
+          <hr />
+            <SegundoComponente />
+          <hr />
+            <MiComponente />
+        </div>
       </header>
     </div>
   );
